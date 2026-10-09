@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-const origin=(process.env.SITE_URL || 'https://shoxil.com').replace(/\/$/, '');
+const origin=(process.env.SITE_URL || 'https://shoxil.com').replace(/^http:/,'https:').replace(/\/$/, '');
 const basePath=new URL(origin).pathname.replace(/\/$/, '');
 fs.mkdirSync('dist',{recursive:true});
 fs.writeFileSync('dist/styles.css',fs.readFileSync('styles.css','utf8').replace(/url\('\//g,`url('${basePath}/`));
