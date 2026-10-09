@@ -1,0 +1,1 @@
+{"name":"shoxil-brand-site","private":true,"type":"module","scripts":{"build":"node build.mjs","check":"node check.mjs","dev":"node server.mjs"}}
