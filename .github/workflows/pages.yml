@@ -32,6 +32,7 @@ jobs:
         run: |
           node build.mjs
           node check.mjs
+          node seo-check.mjs
           node --check dist/site.js
       - uses: actions/upload-pages-artifact@v4
         with:
